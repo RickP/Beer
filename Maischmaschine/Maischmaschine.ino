@@ -116,8 +116,7 @@ void ledOff() {digitalWrite(LEDPIN,0);}
 /* here we define the menu structure and wire actions functions to it empty options are just for scroll testing
 */
     CHOOSE(currentConfig,chooseConfig,"Choose Config",
-      //VALUE("Config:" + configName[0] ,configName[0]), // try to display name of config from variable here
-      VALUE("Config 0" ,configName[0]),           
+      VALUE(("Config " + configName[0]).c_str(), configName[0]), // This should work         
       VALUE("Config 1",configName[1]),
       VALUE("Config 2",configName[2]),
       VALUE("Config 3",configName[3]),
